@@ -1,10 +1,12 @@
 import React from 'react'
-import Loader from '../components/Loader';
 import styled from "styled-components"
+
+import Loader from '../components/Loader/Loader';
 import Navbar from '../components/Navbar/Navbar'
 import HeroBanner from '../components/HeroBanner/HeroBanner';
 import Products from '../components/Products/Products';
 import Footer from '../components/Footer/Footer';
+
 
 const Container = styled.div``;
 

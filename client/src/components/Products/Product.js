@@ -1,6 +1,8 @@
 
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShopify } from "@fortawesome/free-brands-svg-icons";
 
 const Info = styled.div`
   opacity: 0;
@@ -70,7 +72,7 @@ const Product = ({ item }) => {
       <Image src={item.img} />
       <Info>
         <Icon>
-   
+  
         </Icon>
         <Icon>
           <Link to={`/product/${item._id}`}>

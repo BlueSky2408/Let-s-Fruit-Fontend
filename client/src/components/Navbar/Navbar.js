@@ -1,4 +1,7 @@
 import React from 'react'
+import { Link } from "react-router-dom";
+import "./Navbar.css"
+
 
 const Navbar = () => {
   return (
@@ -7,33 +10,33 @@ const Navbar = () => {
         <div className="row">
           <div className="col-lg-12 col-sm-12 text-center">
             <div className="main-menu-wrap">
-        
+
               <div className="site-logo">
-                <a href="index_2.html">Let's Fruit</a>
+                <a href="/">Let's Fruit</a>
                 <p>Fruit & Flower Boutique</p>
               </div>
-          
+
               <nav className="main-menu">
-                <ul>
-                  <li className="current-list-item"><a href="index_2.html">Trang chủ</a></li>
-                  <li><a href="index_2.html">Giỏ hoa quả</a></li>
-                  <li><a href="index_2.html">Detox</a></li>
-                  <li><a href="index_2.html">Wine & Whisky</a></li>
-                  <li><a href="index_2.html">Đồ khô</a></li>
-                  <li><a href="index_2.html">Thiệp chúc mừng</a></li>
-                  <li><a href="index_2.html">FAQs</a>
+                <ul className="current-list-item">
+                  <li><a href="/">Trang chủ</a></li>
+                  <li><a href="/ProductList">Giỏ hoa quả</a></li>
+                  <li><a href="/detox">Detox</a></li>
+                  <li><a href="/alcohol">Wine & Whisky</a></li>
+                  <li><a href="/do_kho">Đồ khô</a></li>
+                  <li><a href="/thiep_chuc_mung">Thiệp chúc mừng</a></li>
+                  <li><a href="/FAQs">FAQs</a>
                     <ul className="sub-menu">
-                      <li><a href="index_2.html">Cách trả tiền?</a></li>
-                      <li><a href="index_2.html">Cách mua hàng</a></li>
-                      <li><a href="index_2.html">Phương thức thanh toán</a></li>
+                      <li><a href="/">Cách trả tiền?</a></li>
+                      <li><a href="/">Cách mua hàng</a></li>
+                      <li><a href="/">Phương thức thanh toán</a></li>
                     </ul>
                   </li>
-        
+
                   <li>
                     <div className="header-icons">
-                      <a className="mobile-hide search-bar-icon" href="index_2.html"><i
+                      <a className="mobile-hide admin-icon" href="/login"><i
                         className="fas fa-user"></i></a>
-                      <a className="shopping-cart" href="cart.html"><i
+                      <a className="shopping-cart" href="/cart"><i
                         className="fas fa-shopping-cart"></i></a>
                     </div>
                   </li>

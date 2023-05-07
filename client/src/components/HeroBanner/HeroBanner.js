@@ -1,4 +1,5 @@
 import React from 'react'
+import "./HeroBanner.css"
 
 const HeroBanner = () => {
   return (
@@ -14,7 +15,7 @@ const HeroBanner = () => {
                     <h1>We bring you wonderful fruit baskets & More</h1>
                     <div className="hero-btns">
                       <a href="/ProductList" className="boxed-btn">Fruit Basket Collection</a>
-                      <a href="contact.html" className="bordered-btn">Contact Us</a>
+                      <a href="/" className="bordered-btn">Contact Us</a>
                     </div>
                   </div>
                 </div>

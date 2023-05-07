@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Loader from '../components/Loader/Loader';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
   width: 100vw;
@@ -54,40 +56,88 @@ const Button = styled.button`
   }
 `;
 
-const Link = styled.a`
-  margin: 5px 0px;
-  font-size: 12px;
-  text-decoration: underline;
-  cursor: pointer;
-`;
-
 const Error = styled.span`
   color: red;
 `;
 
-const Login = () => {
-    return (
-        <Container>
-            <Loader />
-            <Wrapper>
-                <Title>SIGN IN</Title>
-                <Form>
-                    <Input
-                        placeholder="username"
-                        
-                    />
-                    <Input
-                        placeholder="password"
-                        type="password"
-                    />
-                    <Button>
-                        LOGIN
-                    </Button>
-                  
-                </Form>
-            </Wrapper>
-        </Container>
-    )
+async function loginUser(credentials) {
+  return fetch('http://localhost:8080/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(credentials)
+  })
+    .then(data => data.json())
+}
+
+
+const Login = ({ setToken }) => {
+  const [username, setUser] = useState("");
+  const [password, setPassword] = useState("");
+  const [errorMessages, setErrorMessages] = useState("");
+
+  const database = [
+    {
+      username: "LetsFruitAdmin",
+      password: "12345"
+    },
+  ];
+
+  const errors = {
+    username: "invalid username",
+    password: "invalid password"
+  };
+
+  // form function
+  const handleSubmit = async e => {
+    e.preventDefault();
+    const token = await loginUser({
+      username,
+      password
+    });
+    setToken(token);
+
+    
+  }
+
+  const renderErrorMessage = (name) =>
+    name === errorMessages.name && (
+      <div className="error">{errorMessages.message}</div>
+    );
+
+  return (
+    <Container>
+      <Loader />
+      <Wrapper>
+        <Title>Login</Title>
+        <Form onSubmit={handleSubmit}>
+          <Input
+            value={username}
+            onChange={(e) => setUser(e.target.value)}
+            placeholder="username"
+            required
+          />
+          {renderErrorMessage("username")}
+          <Input
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="password"
+            type="password"
+            required
+          />
+          {renderErrorMessage("password")}
+          <Link to="/admin"><Button>
+            LOGIN
+          </Button></Link>
+        </Form>
+      </Wrapper>
+    </Container>
+  )
+}
+
+Login.propTypes = {
+  setToken: PropTypes.func.isRequired
 }
 
 export default Login

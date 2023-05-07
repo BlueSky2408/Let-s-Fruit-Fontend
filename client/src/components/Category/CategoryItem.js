@@ -62,7 +62,7 @@ const CategoryItem = ({ item }) => {
       <Info>
         <Title>{item.title}</Title>
         <Wrapper>
-          <Button>SHOP NOW</Button>
+          <a href={item.router}><Button>SHOP NOW</Button></a>
         </Wrapper>
       </Info>
     </Container>

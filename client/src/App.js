@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
@@ -17,6 +17,7 @@ import ShoppingCart from "./pages/ShoppingCart";
 import Checkout from "./pages/Checkout";
 import SingleProduct from "./pages/Single_product";
 import Login from "./pages/Login";
+import Fruit from './pages/Fruit/Fruit';
 
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
     <Router>
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/ProductList" element={<ProductList />} />
+        <Route exact path="/fruit" element={<Fruit />} />
         <Route exact path="/detox" element={<Detox />} />
         <Route exact path="/alcohol" element={<Alcohol />} />
         <Route exact path="/do_kho" element={<DryFood />} />

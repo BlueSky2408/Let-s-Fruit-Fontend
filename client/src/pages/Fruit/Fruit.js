@@ -1,5 +1,5 @@
 import React from 'react'
-import "./DryFood.css"
+import "./Fruit.css"
 
 import styled from "styled-components"
 
@@ -14,7 +14,13 @@ import ProductCard from '../../components/Product/ProductCard'
 const Container = styled.div``;
 
 const Title = styled.h1`
-    margin: 20px
+  margin-top: 80px;
+  margin-bottom: 50px;
+  font-family: "Great Vibes", cursive;
+  font-size: 60px;
+  position: relative;
+  padding-bottom: 15px;
+  align-content: center;
 `;
 
 const FilterContainer = styled.div`
@@ -41,15 +47,14 @@ const Option = styled.option`
 
 `;
 
-
-const DryFood = () => {
+const Fruit = () => {
   return (
     <div>
       <Loader />
       <Navbar />
       <HeroBanner />
       <Container>
-        <Title>Đồ khô</Title>
+        <Title>Giỏ hoa quả</Title>
         <FilterContainer>
           <Filter>
             <FilterText>Filter Products:</FilterText>
@@ -92,7 +97,6 @@ const DryFood = () => {
               </div>
             </div>
           </div>
-
           <div className="row">
             <ProductCard />
             <ProductCard />
@@ -108,5 +112,4 @@ const DryFood = () => {
   )
 }
 
-
-export default DryFood
+export default Fruit

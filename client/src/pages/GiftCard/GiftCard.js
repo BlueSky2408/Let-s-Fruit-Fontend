@@ -6,8 +6,9 @@ import styled from "styled-components"
 import Loader from '../../components/Loader/Loader'
 import Navbar from '../../components/Navbar/Navbar'
 import HeroBanner from '../../components/HeroBanner/HeroBanner'
-import Products from '../../components/Products/Products'
 import Footer from '../../components/Footer/Footer'
+import ProductList from '../../components/ProductList/ProductList'
+import ProductCard from '../../components/Product/ProductCard'
 
 
 const Container = styled.div``;
@@ -80,7 +81,27 @@ const GiftCard = () => {
           </Filter>
         </FilterContainer>
       </Container>
-      <Products />
+      <ProductList />
+      <div className="product-section mt-80 mb-150">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8 offset-lg-2 text-center">
+              <div className="section-title">
+                <h3>Những sản phẩm <span className="orange-text">của chúng tôi</span></h3>
+              </div>
+            </div>
+          </div>
+
+          <div className="row">
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+          </div>
+        </div>
+      </div>
       <Footer />
     </div>
   )

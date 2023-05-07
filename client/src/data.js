@@ -27,19 +27,19 @@ export const categories = [
     id: 1,
     img: "https://images.pexels.com/photos/9299260/pexels-photo-9299260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     title: "Wine & Whisky",
-    cat: "women"
+    router: "/alcohol"
   },
   {
     id: 2,
     img: "https://images.pexels.com/photos/4551975/pexels-photo-4551975.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     title: "Detox",
-    cat: "coat"
+    router: "/detox"
   },
   {
     id: 3,
     img: "https://images.pexels.com/photos/219794/pexels-photo-219794.jpeg?auto=compress&cs=tinysrgb&w=600",
     title: "Fruit Basket",
-    cat: "jeans"
+    router: "/ProductList"
   },
 ];
 
@@ -128,3 +128,57 @@ export const userData = [
     Doanh_thu: 7600,
   },
 ];
+
+export const list = [
+  {
+    title: "Những sản phẩm bán chạy nhất",
+    products: [
+      {
+        id: 1,
+        img: "https://images.pexels.com/photos/9299260/pexels-photo-9299260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        product_title: "Fruit Basket 1",
+        price: "women"
+      },
+      {
+        id: 2,
+        img: "https://images.pexels.com/photos/4551975/pexels-photo-4551975.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        product_title: "Fruit Basket 2",
+        price: "coat"
+      },
+      {
+        id: 3,
+        img: "https://images.pexels.com/photos/219794/pexels-photo-219794.jpeg?auto=compress&cs=tinysrgb&w=600",
+        product_title: "Fruit Basket 3",
+        price: "jeans"
+      }
+    ]
+  },
+  {
+    title: "Sản phẩm đi kèm",
+    products: [
+      {
+        id: 4,
+        img: "https://media.istockphoto.com/id/478098835/photo/bowl-of-fresh-fruit.jpg?b=1&s=612x612&w=0&k=20&c=6uRCfGflFTS97nsDPmYDaQYTikvTApg6hdcSVvzmO0Y=",
+        product_title: "Fruit Basket 4",
+        price: "women"
+      },
+      {
+        id: 5,
+        img: "https://images.pexels.com/photos/2255924/pexels-photo-2255924.jpeg?auto=compress&cs=tinysrgb&w=600",
+        product_title: "Fruit Basket 5",
+        price: "coat"
+      },
+      {
+        id: 6,
+        img: "https://images.pexels.com/photos/220911/pexels-photo-220911.jpeg?auto=compress&cs=tinysrgb&w=600",
+        product_title: "Fruit Basket 6",
+        price: "jeans"
+      }
+    ]
+  }
+];
+
+export const user = {
+  email: "shopping@gmail.com",
+  password: "12345",
+}

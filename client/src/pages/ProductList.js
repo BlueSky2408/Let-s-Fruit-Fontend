@@ -4,8 +4,8 @@ import styled from "styled-components"
 import Loader from '../components/Loader/Loader';
 import Navbar from '../components/Navbar/Navbar'
 import HeroBanner from '../components/HeroBanner/HeroBanner';
-import Products from '../components/Products/Products';
 import Footer from '../components/Footer/Footer';
+import ProductCard from '../components/Product/ProductCard';
 
 
 const Container = styled.div``;
@@ -78,7 +78,7 @@ const ProductList = () => {
                     </Filter>
                 </FilterContainer>
             </Container>
-            <Products />
+            <ProductList />
             <Footer />
         </>
     )

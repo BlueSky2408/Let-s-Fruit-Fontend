@@ -19,7 +19,7 @@ const Navbar = () => {
               <nav className="main-menu">
                 <ul className="current-list-item">
                   <li><a href="/">Trang chủ</a></li>
-                  <li><a href="/ProductList">Giỏ hoa quả</a></li>
+                  <li><a href="/fruit">Giỏ hoa quả</a></li>
                   <li><a href="/detox">Detox</a></li>
                   <li><a href="/alcohol">Wine & Whisky</a></li>
                   <li><a href="/do_kho">Đồ khô</a></li>

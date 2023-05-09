@@ -8,33 +8,35 @@ import PersonIcon from '@mui/icons-material/Person';
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import SignalCellularAltIcon from '@mui/icons-material/SignalCellularAlt';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 const Sidebar = () => {
+
   return (
     <div className="sidebar">
         <div className="sidebarWrapper">
           <div className="sidebarMenu">
             <h3 className="sidebarTitle">Dashboard</h3>
             <ul className="sidebarList">
-              <Link to="/admin" className="link">
+              <Link to="/" className="link">
               <li className="sidebarItems">
                 <HomeIcon className="sidebarIcon" />
                 Trang chủ
               </li>
               </Link>
-              <li className="sidebarItems">
+              <Link to="/revenue" className="link"><li className="sidebarItems">
                 <TrendingUpIcon className="sidebarIcon"/>
                 Thông số doanh thu
-              </li>
+              </li></Link>
             </ul>
           </div>
           <div className="sidebarMenu">
             <h3 className="sidebarTitle">Quick Menu</h3>
             <ul className="sidebarList">
-              <li className="sidebarItems">
+              {/*<li className="sidebarItems">
                 <PersonIcon className="sidebarIcon" />
                 User
-              </li>
+                </li>*/}
               <Link to="/products" className="link">
               <li className="sidebarItems">
                 <StorefrontIcon className="sidebarIcon"/>
@@ -49,6 +51,10 @@ const Sidebar = () => {
                 <SignalCellularAltIcon className="sidebarIcon"/>
                 Báo cáo
               </li>
+              <li className="sidebarItems">
+                <LogoutIcon className="sidebarIcon"/>
+                Thoát
+              </li>
             </ul>
           </div>
           
@@ -56,5 +62,6 @@ const Sidebar = () => {
     </div>
   )
 }
+
 
 export default Sidebar

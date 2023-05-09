@@ -32,6 +32,7 @@
     display: flex;
     align-items: center;
     border-radius: 30px;
+    font-size: 19px;
 
     background: linear-gradient(to left, #d0dde0 50%, #d49a73b4 50%) right;
     background-size: 200%;

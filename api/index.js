@@ -1,9 +1,10 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mariadb = require("mariadb");
+const cors = require("cors");
 
 const app = express();
-const port = 3000;
+const port = 3002;
 
 app.use(bodyParser.json());
 // app.use(express.json());
@@ -20,8 +21,15 @@ const pool = mariadb.createPool({
   database: "LETSFRUIT_DB",
 });
 
+app.use(
+  cors({
+    origin: "http://localhost:3000", // or an array of allowed origins
+  })
+);
+
 // Get all products
 app.get("/products", async (req, res) => {
+  console.log("Fetching all products");
   const conn = await pool.getConnection();
   try {
     const rows = await conn.query("SELECT * FROM Product");

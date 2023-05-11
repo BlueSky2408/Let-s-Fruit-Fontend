@@ -11,7 +11,7 @@ function ProductCard(props) {
         </div>
         <h3>{props.productName}</h3>
         <p className="product-price">
-          <span>Per Kg</span> {props.productPrice}đ
+          {props.productPrice}đ
         </p>
         <a href="cart.html" className="cart-btn">
           <i className="fas fa-shopping-cart"></i> Add to Cart

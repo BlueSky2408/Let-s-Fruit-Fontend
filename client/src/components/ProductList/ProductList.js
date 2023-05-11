@@ -2,7 +2,15 @@ import React from 'react'
 import ProductCard from '../Product/ProductCard'
 
 
-export const ProductList = () => {
+export const ProductList = (props) => {
+  const productData = props.products.map((product) => (
+    <ProductCard
+      key={product.id}
+      productName={product.name}
+      productPrice={product.price}
+      imgSrc={product.image}
+    />
+  ));
   return (
     <div className="product-section mt-80 mb-150">
       <div className="container">
@@ -14,11 +22,7 @@ export const ProductList = () => {
           </div>
         </div>
 
-        <div className="row">
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-        </div>
+        <div className="row">{productData}</div>
       </div>
     </div>
   )

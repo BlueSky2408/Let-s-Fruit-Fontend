@@ -5,7 +5,6 @@ import HeroBanner from "../components/HeroBanner/HeroBanner";
 import Categories from '../components/Category/Categories'
 import Map from "../components/Map/Map";
 import Footer from "../components/Footer/Footer";
-import FeatureList from "../components/HomePage/FeatureList";
 import ProductSection from "../components/HomePage/ProductSection";
 import FeatureList from '../components/FeatureList/FeatureList'
 import AboutUs from '../components/AboutUs/AboutUs'
@@ -23,9 +22,20 @@ const Home = () => {
             <FeatureList />
             <Categories />
             <Bubble />
-            <ProductList />
+            <ProductList
+                products={[
+                    {
+                        id: 1,
+                        name: "",
+                        price: 0,
+                        image: "",
+                    }
+                ]}
+            />
             <Map />
             <Footer />
         </>
     )
 }
+
+export default Home

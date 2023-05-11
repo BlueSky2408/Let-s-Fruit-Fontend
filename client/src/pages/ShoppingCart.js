@@ -96,7 +96,7 @@ const ShoppingCart = () => {
                                 </table>
                                 <div className="cart-buttons">
                                     <a href="cart.html" className="boxed-btn">Update Cart</a>
-                                    <a href="checkout.html" className="boxed-btn black">Check Out</a>
+                                    <a href="/checkout" className="boxed-btn black">Check Out</a>
                                 </div>
                             </div>
 

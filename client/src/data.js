@@ -39,7 +39,7 @@ export const categories = [
     id: 3,
     img: "https://images.pexels.com/photos/219794/pexels-photo-219794.jpeg?auto=compress&cs=tinysrgb&w=600",
     title: "Fruit Basket",
-    router: "/ProductList"
+    router: "/fruit"
   },
 ];
 
@@ -78,103 +78,42 @@ export const popularProducts = [
   },
 ]
 
-export const userData = [
+export const props = [
   {
-    name: 'T1',
-    Doanh_thu: 4000,
+    id: 1,
+    img: "https://images.pexels.com/photos/9299260/pexels-photo-9299260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    title: "Fruit Basket 1",
+    price: "$120"
   },
   {
-    name: 'T2',
-    Doanh_thu: 3000,
+    id: 2,
+    img: "https://images.pexels.com/photos/4551975/pexels-photo-4551975.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    product_title: "Fruit Basket 2",
+    price: "$120"
   },
   {
-    name: 'T3',
-    Doanh_thu: 2000,
+    id: 3,
+    img: "https://images.pexels.com/photos/219794/pexels-photo-219794.jpeg?auto=compress&cs=tinysrgb&w=600",
+    product_title: "Fruit Basket 3",
+    price: "jeans"
   },
   {
-    name: 'T4',
-    Doanh_thu: 5000,
+    id: 4,
+    img: "https://media.istockphoto.com/id/478098835/photo/bowl-of-fresh-fruit.jpg?b=1&s=612x612&w=0&k=20&c=6uRCfGflFTS97nsDPmYDaQYTikvTApg6hdcSVvzmO0Y=",
+    product_title: "Fruit Basket 4",
+    price: "women"
   },
   {
-    name: 'T5',
-    Doanh_thu: 6000,
+    id: 5,
+    img: "https://images.pexels.com/photos/2255924/pexels-photo-2255924.jpeg?auto=compress&cs=tinysrgb&w=600",
+    product_title: "Fruit Basket 5",
+    price: "coat"
   },
   {
-    name: 'T6',
-    Doanh_thu: 5500,
-  },
-  {
-    name: 'T7',
-    Doanh_thu: 5600,
-  },
-  {
-    name: 'T8',
-    Doanh_thu: 5200,
-  },
-  {
-    name: 'T9',
-    Doanh_thu: 6300,
-  },
-  {
-    name: 'T10',
-    Doanh_thu: 6600,
-  },
-  {
-    name: 'T11',
-    Doanh_thu: 7100,
-  },
-  {
-    name: 'T12',
-    Doanh_thu: 7600,
-  },
-];
-
-export const list = [
-  {
-    title: "Những sản phẩm bán chạy nhất",
-    products: [
-      {
-        id: 1,
-        img: "https://images.pexels.com/photos/9299260/pexels-photo-9299260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        product_title: "Fruit Basket 1",
-        price: "women"
-      },
-      {
-        id: 2,
-        img: "https://images.pexels.com/photos/4551975/pexels-photo-4551975.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        product_title: "Fruit Basket 2",
-        price: "coat"
-      },
-      {
-        id: 3,
-        img: "https://images.pexels.com/photos/219794/pexels-photo-219794.jpeg?auto=compress&cs=tinysrgb&w=600",
-        product_title: "Fruit Basket 3",
-        price: "jeans"
-      }
-    ]
-  },
-  {
-    title: "Sản phẩm đi kèm",
-    products: [
-      {
-        id: 4,
-        img: "https://media.istockphoto.com/id/478098835/photo/bowl-of-fresh-fruit.jpg?b=1&s=612x612&w=0&k=20&c=6uRCfGflFTS97nsDPmYDaQYTikvTApg6hdcSVvzmO0Y=",
-        product_title: "Fruit Basket 4",
-        price: "women"
-      },
-      {
-        id: 5,
-        img: "https://images.pexels.com/photos/2255924/pexels-photo-2255924.jpeg?auto=compress&cs=tinysrgb&w=600",
-        product_title: "Fruit Basket 5",
-        price: "coat"
-      },
-      {
-        id: 6,
-        img: "https://images.pexels.com/photos/220911/pexels-photo-220911.jpeg?auto=compress&cs=tinysrgb&w=600",
-        product_title: "Fruit Basket 6",
-        price: "jeans"
-      }
-    ]
+    id: 6,
+    img: "https://images.pexels.com/photos/220911/pexels-photo-220911.jpeg?auto=compress&cs=tinysrgb&w=600",
+    product_title: "Fruit Basket 6",
+    price: "jeans"
   }
 ];
 

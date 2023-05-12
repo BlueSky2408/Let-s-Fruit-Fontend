@@ -1,0 +1,7 @@
+.categories-container {
+  display: flex;
+  padding: 40px;
+  gap: 10px;
+  margin-left: 20px;
+  margin-top: 50px;
+}

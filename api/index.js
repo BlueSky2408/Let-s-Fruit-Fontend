@@ -16,8 +16,8 @@ app.use(bodyParser.json());
 
 const pool = mariadb.createPool({
   host: "localhost",
-  user: "",
-  password: "",
+  user: "LETSFRUIT",
+  password: "LETSFRUIT",
   database: "LETSFRUIT_DB",
 });
 
@@ -28,11 +28,26 @@ app.use(
 );
 
 // Get all products
-app.get("/products", async (req, res) => {
+app.get("/products/all", async (req, res) => {
   console.log("Fetching all products");
   const conn = await pool.getConnection();
   try {
     const rows = await conn.query("SELECT * FROM Product");
+    res.json(rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Internal server error" });
+  } finally {
+    conn.release();
+  }
+});
+
+// Get a list of products with some column
+app.get("/products/list", async (req, res) => {
+  console.log("Fetching all products");
+  const conn = await pool.getConnection();
+  try {
+    const rows = await conn.query("SELECT id, name, price, enabled, image_url FROM Product");
     res.json(rows);
   } catch (err) {
     console.error(err);

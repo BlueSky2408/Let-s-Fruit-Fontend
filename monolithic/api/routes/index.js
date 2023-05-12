@@ -1,19 +1,13 @@
-const express = require("express");
-const bodyParser = require("body-parser");
+var express = require('express');
+const bodyParser = require("body-parser"); // Require body-parser to parse incoming request bodies 
 const mariadb = require("mariadb");
-const cors = require("cors");
+// const cors = require("cors"); // Require cors to enable cross-origin resource sharing 
 
-const app = express();
-const port = 3002;
+var router = express.Router(); // Create a router object 
 
-app.use(bodyParser.json());
-// app.use(express.json());
-// app.use(
-//   express.urlencoded({
-//     extended: true,
-//   })
-// );
+router.use(bodyParser.json()); // Use body-parser to parse incoming request bodies 
 
+// Create a pool of connections to the MariaDB database
 const pool = mariadb.createPool({
   host: "localhost",
   user: "LETSFRUIT",
@@ -21,14 +15,15 @@ const pool = mariadb.createPool({
   database: "LETSFRUIT_DB",
 });
 
-app.use(
-  cors({
-    origin: "http://localhost:3000", // or an array of allowed origins
-  })
-);
+// Use cors to enable cross-origin resource sharing 
+// router.use(
+//   cors({
+//     origin: "http://localhost:3000"
+//   })
+// );
 
 // Get all products
-app.get("/products/all", async (req, res) => {
+router.get("/products/all", async (req, res) => {
   console.log("Fetching all products");
   const conn = await pool.getConnection();
   try {
@@ -43,7 +38,7 @@ app.get("/products/all", async (req, res) => {
 });
 
 // Get a list of products with some column
-app.get("/products/list", async (req, res) => {
+router.get("/products/list", async (req, res) => {
   console.log("Fetching all products");
   const conn = await pool.getConnection();
   try {
@@ -58,7 +53,7 @@ app.get("/products/list", async (req, res) => {
 });
 
 // Get a single product
-app.get("/products/:id", async (req, res) => {
+router.get("/products/:id", async (req, res) => {
   const conn = await pool.getConnection();
   try {
     const { id } = req.params;
@@ -77,7 +72,7 @@ app.get("/products/:id", async (req, res) => {
 });
 
 // Create a new product
-app.post("/products", async (req, res) => {
+router.post("/products", async (req, res) => {
   const conn = await pool.getConnection();
   try {
     const {
@@ -121,7 +116,7 @@ app.post("/products", async (req, res) => {
 });
 
 // Update an existing product
-app.put("/products/:id", async (req, res) => {
+router.put("/products/:id", async (req, res) => {
   const conn = await pool.getConnection();
   try {
     const { id } = req.params;
@@ -171,7 +166,7 @@ app.put("/products/:id", async (req, res) => {
 });
 
 // Get all categories
-app.get("/categories", async (req, res) => {
+router.get("/categories", async (req, res) => {
   const conn = await pool.getConnection();
   try {
     const rows = await conn.query("SELECT * FROM Category");
@@ -185,7 +180,7 @@ app.get("/categories", async (req, res) => {
 });
 
 // Get a single category
-app.get("/categories/:id", async (req, res) => {
+router.get("/categories/:id", async (req, res) => {
   const conn = await pool.getConnection();
   try {
     const { id } = req.params;
@@ -204,7 +199,7 @@ app.get("/categories/:id", async (req, res) => {
 });
 
 // Get all products in a category
-app.get("/categories/:id/products", async (req, res) => {
+router.get("/categories/:id/products", async (req, res) => {
   const conn = await pool.getConnection();
   try {
     const { id } = req.params;
@@ -222,7 +217,7 @@ app.get("/categories/:id/products", async (req, res) => {
 });
 
 // Create a new category
-app.post("/categories", async (req, res) => {
+router.post("/categories", async (req, res) => {
   const conn = await pool.getConnection();
   try {
     const { name, description, origin, product } = req.body;
@@ -240,7 +235,7 @@ app.post("/categories", async (req, res) => {
 });
 
 // Update an existing category
-app.put("/categories/:id", async (req, res) => {
+router.put("/categories/:id", async (req, res) => {
   const conn = await pool.getConnection();
   try {
     const { id } = req.params;
@@ -262,4 +257,4 @@ app.put("/categories/:id", async (req, res) => {
   }
 });
 
-app.listen(port, () => console.log(`Listening on port ${port}`));
+module.exports = router;

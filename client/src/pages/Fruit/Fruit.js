@@ -13,7 +13,6 @@ import ProductCard from '../../components/Product/ProductCard'
 
 const Container = styled.div``;
 
-/*
 const Title = styled.h1`
   margin-top: 80px;
   margin-bottom: 50px;
@@ -22,7 +21,7 @@ const Title = styled.h1`
   position: relative;
   padding-bottom: 15px;
   align-content: center;
-`;*/
+`;
 
 const FilterContainer = styled.div`
     display: flex;
@@ -54,8 +53,8 @@ const Fruit = () => {
       <Loader />
       <Navbar />
       <HeroBanner />
-      <ProductList />
       <Container>
+        <Title>Giỏ hoa quả</Title>
         <FilterContainer>
           <Filter>
             <FilterText>Filter Products:</FilterText>
@@ -88,19 +87,17 @@ const Fruit = () => {
           </Filter>
         </FilterContainer>
       </Container>
+      <ProductList />
       <div className="product-section mt-80 mb-150">
         <div className="container">
           <div className="row">
             <div className="col-lg-8 offset-lg-2 text-center">
               <div className="section-title">
-                <h3>Các sản phẩm <span className="orange-text">của chúng tôi</span></h3>
+                <h3>Những sản phẩm <span className="orange-text">của chúng tôi</span></h3>
               </div>
             </div>
           </div>
           <div className="row">
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
             <ProductCard />
             <ProductCard />
             <ProductCard />

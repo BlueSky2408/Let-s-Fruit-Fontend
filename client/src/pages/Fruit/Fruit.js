@@ -12,7 +12,6 @@ import ProductList from '../../components/ProductList/ProductList'
 
 const Container = styled.div``;
 
-/*
 const Title = styled.h1`
   margin-top: 80px;
   margin-bottom: 50px;
@@ -21,7 +20,7 @@ const Title = styled.h1`
   position: relative;
   padding-bottom: 15px;
   align-content: center;
-`;*/
+`;
 
 const FilterContainer = styled.div`
     display: flex;
@@ -78,6 +77,7 @@ const Fruit = (props) => {
         ]}
       />
       <Container>
+        <Title>Giỏ hoa quả</Title>
         <FilterContainer>
           <Filter>
             <FilterText>Filter Products:</FilterText>

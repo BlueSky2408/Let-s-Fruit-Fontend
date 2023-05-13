@@ -26,7 +26,7 @@ function App() {
     <Router>
       <Topbar />
       <div className="contain">
-        <Sidebar />
+        <Sidebar/>
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/revenue" element={<Revenue />} />

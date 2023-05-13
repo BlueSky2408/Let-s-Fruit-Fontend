@@ -13,6 +13,10 @@ import ProductCard from '../../components/Product/ProductCard'
 
 const Container = styled.div``;
 
+const Title = styled.h1`
+    margin: 20px
+`;
+
 const FilterContainer = styled.div`
     display: flex;
     justify-content: space-between;
@@ -43,8 +47,8 @@ const GiftCard = () => {
       <Loader />
       <Navbar />
       <HeroBanner />
-      <ProductList />
       <Container>
+        <Title>Thiệp Chúc Mừng</Title>
         <FilterContainer>
           <Filter>
             <FilterText>Filter Products:</FilterText>
@@ -77,6 +81,7 @@ const GiftCard = () => {
           </Filter>
         </FilterContainer>
       </Container>
+      <ProductList />
       <div className="product-section mt-80 mb-150">
         <div className="container">
           <div className="row">

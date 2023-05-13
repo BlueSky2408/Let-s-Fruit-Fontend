@@ -13,6 +13,15 @@ import ProductCard from '../../components/Product/ProductCard'
 
 const Container = styled.div``;
 
+const Title = styled.h1`
+  margin-top: 80px;
+  margin-bottom: 50px;
+  font-family: "Great Vibes", cursive;
+  font-size: 60px;
+  position: relative;
+  padding-bottom: 15px;
+`;
+
 const FilterContainer = styled.div`
     display: flex;
     justify-content: space-between;
@@ -43,8 +52,8 @@ const Detox = () => {
       <Loader />
       <Navbar />
       <HeroBanner />
-      <ProductList />
       <Container>
+        <Title>Detox</Title>
         <FilterContainer>
           <Filter>
             <FilterText>Filter Products:</FilterText>
@@ -77,6 +86,7 @@ const Detox = () => {
           </Filter>
         </FilterContainer>
       </Container>
+      <ProductList />
       <div className="product-section mt-80 mb-150">
         <div className="container">
           <div className="row">

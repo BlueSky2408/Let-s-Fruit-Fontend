@@ -25,15 +25,10 @@ const Sidebar = () => {
                 Trang chủ
               </li>
             </Link>
-            <Link to="/revenue" className="link"><li className="sidebarItems">
+            {/* <Link to="/revenue" className="link"><li className="sidebarItems">
               <TrendingUpIcon className="sidebarIcon" />
               Thông số doanh thu
-            </li></Link>
-          </ul>
-        </div>
-        <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Quick Menu</h3>
-          <ul className="sidebarList">
+            </li></Link> */}
             {/*<li className="sidebarItems">
                 <PersonIcon className="sidebarIcon" />
                 User
@@ -45,23 +40,22 @@ const Sidebar = () => {
               </li>
             </Link>
             <Link to="/addProduct" className="link">
+              <li className="sidebarItems">
+                <AddBusinessIcon className="sidebarIcon" />
+                Thêm sản phẩm
+              </li>
+            </Link>
+            {/* <li className="sidebarItems">
+              <SignalCellularAltIcon className="sidebarIcon" />
+              Báo cáo
+            </li> */}
             <li className="sidebarItems">
-              <AddBusinessIcon className="sidebarIcon" />
-              Thêm sản phẩm
+              <LogoutIcon className="sidebarIcon" />
+              Thoát
             </li>
-          </Link>
-          <li className="sidebarItems">
-            <SignalCellularAltIcon className="sidebarIcon" />
-            Báo cáo
-          </li>
-          <li className="sidebarItems">
-            <LogoutIcon className="sidebarIcon" />
-            Thoát
-          </li>
-        </ul>
+          </ul>
+        </div>
       </div>
-
-    </div>
     </div >
   )
 }

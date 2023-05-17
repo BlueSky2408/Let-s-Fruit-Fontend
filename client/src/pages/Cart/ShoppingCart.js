@@ -7,7 +7,7 @@ import { useContext } from 'react'
 
 
 const ShoppingCart = (props) => {
-    const { cartItems, removeFromCart, updateQuantity, cartTotal } = useContext(CartContext);
+    const { cartItems, removeFromCart, updateQuantity, cartTotal, updateCartItems } = useContext(CartContext);
 
 
     const calculateTotal = () => {
@@ -107,8 +107,8 @@ const ShoppingCart = (props) => {
                                     </tbody>
                                 </table>
                                 <div className="cart-buttons">
-                                    <a href="cart.html" className="boxed-btn">Update Cart</a>
-                                    <a href="checkout.html" className="boxed-btn black">Check Out</a>
+                                    <a href="/cart" className="boxed-btn">Update Cart</a>
+                                    <a href="/checkout" className="boxed-btn black">Check Out</a>
                                 </div>
                             </div>
                         </div>

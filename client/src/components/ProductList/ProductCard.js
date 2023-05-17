@@ -27,7 +27,7 @@ const ProductCard = (props) => {
                     {/* </Link> */}
                     <h3>{props.productName}</h3>
                     <p className="product-price">{props.productPrice}</p>
-                    <a href="#" className="cart-btn" onClick={addToCart}><i className="fas fa-shopping-cart"></i> Add to Cart</a>
+                    <a href="/cart" className="cart-btn" onClick={addToCart}><i className="fas fa-shopping-cart"></i> Add to Cart</a>
                 </div>
             </div>
         </div>

@@ -1,4 +1,5 @@
 import React, { createContext, useState } from 'react';
+import { useEffect } from 'react';
 
 export const CartContext = createContext();
 
@@ -47,6 +48,29 @@ export const CartProvider = ({ children }) => {
         return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
     };
 
+
+    //Save cartItems to local storage
+    //by converting cartItems into JSON format
+    useEffect(() => {
+        // Load cart items from localStorage on component mount
+        const storedCartItems = localStorage.getItem('cartItems');
+        if (storedCartItems) {
+            setCartItems(JSON.parse(storedCartItems));
+        }
+    }, []);
+
+    //Loading cartItems from local storage
+    //by retrieving the stored JSON string from local storage, parse it back 
+    //to the array, and return cardItems
+    useEffect(() => {
+        // Save cart items to localStorage whenever it changes
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    }, [cartItems]);
+
+    const updateCartItems = (newCartItems) => {
+        setCartItems(newCartItems);
+    };
+
     return (
         <CartContext.Provider
             value={{
@@ -56,6 +80,7 @@ export const CartProvider = ({ children }) => {
                 updateQuantity,
                 clearCart,
                 cartTotal,
+                updateCartItems,
             }}
         >
             {children}

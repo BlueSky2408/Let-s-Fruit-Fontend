@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
+
 import "./FAQs.css"
-import Loader from '../../components/Loader/Loader'
-import Navbar from '../../components/Navbar/Navbar'
-import Footer from '../../components/Footer/Footer'
+
 import questions from "./questions.json"
 
 const FAQs = () => {
@@ -18,8 +17,6 @@ const FAQs = () => {
 
   return (
     <div>
-      <Loader />
-      <Navbar />
       <div className="breadcrumb-section breadcrumb-bg">
         <div className="container">
           <div className="row">
@@ -59,7 +56,6 @@ const FAQs = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   )
 }

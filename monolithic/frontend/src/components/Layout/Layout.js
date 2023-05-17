@@ -1,6 +1,11 @@
 import { Link, Outlet } from "react-router-dom";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+
 import "./Navbar.css";
 import "./Footer.css";
 
@@ -57,9 +62,9 @@ function Layout() {
                         {/* <a className="mobile-hide admin-icon" href="/login">
                           <i className="fas fa-user"></i>
                         </a> */}
-                        <a className="shopping-cart" href="/cart">
+                        <Link className="shopping-cart" to="/cart">
                           <i className="fas fa-shopping-cart"></i>
-                        </a>
+                        </Link>
                       </div>
                     </li>
                   </ul>
@@ -88,26 +93,29 @@ function Layout() {
 
             <div className="col-lg-3 col-md-6">
               <div className="footer-box about-widget">
-                <h2 className="widget-title">Các loại giỏ quà</h2>
+                <h2 className="widget-title">Thông tin liên lạc</h2>
                 <ul>
-                  <li>Giỏ hoa quả</li>
-                  <li>Detox</li>
-                  <li>Wine & Whisky</li>
-                  <li>Đồ khô</li>
-                  <li>Thiệp chúc mừng</li>
+                  <li className="footerItems">
+                    <LocationOnIcon className="footerIcon" />
+                    110 D7 TT Vĩnh Hồ - Ngõ 63 Thái Thịnh - Đống Đa - HN
+                  </li>
+                  <li className="footerItems">
+                    <LocalPhoneIcon className="footerIcon" />
+                    0963.758.338
+                  </li>
                 </ul>
               </div>
             </div>
 
             <div className="col-lg-3 col-md-6">
-              <div className="footer-box get-in-touch">
-                <h2 className="widget-title">Sự kiện</h2>
+              <div className="footer-box about-widget">
+                <h2 className="widget-title">Các loại sản phẩm</h2>
                 <ul>
-                  <li>Năm mới</li>
-                  <li>Chúc mừng sinh nhật</li>
-                  <li>Kỷ niệm</li>
-                  <li>Ngày của Mẹ</li>
-                  <li>Ngày Phụ Nữ Việt Nam</li>
+                  <li>Giỏ hoa quả</li>
+                  <li>Detox</li>
+                  <li>Wine&Whisky</li>
+                  <li>Đồ khô</li>
+                  <li>Thiệp chúc mừng</li>
                 </ul>
               </div>
             </div>
@@ -117,13 +125,13 @@ function Layout() {
                 <h2 className="widget-title">Hướng dẫn hỗ trợ</h2>
                 <ul>
                   <li>
-                    <Link to="/">Cách thức mua hàng</Link>
+                    <a href="index.html">Cách thức mua hàng</a>
                   </li>
                   <li>
-                    <Link to="/">Cách thức tính tiền</Link>
+                    <a href="about.html">Cách thức tính tiền</a>
                   </li>
                   <li>
-                    <Link to="/">Liên hệ nhân viên</Link>
+                    <a href="services.html">Liên hệ nhân viên</a>
                   </li>
                 </ul>
               </div>
@@ -143,6 +151,10 @@ function Layout() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="copyright">
+        <p>© 2023 Bản quyền thuộc về Let's Fruit Việt Nam</p>
       </div>
     </div>
   );

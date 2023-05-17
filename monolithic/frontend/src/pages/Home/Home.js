@@ -23,7 +23,6 @@ const Home = () => {
 
   return (
     <>
-
       {/* About Us */}
 
       <div className="abt-section mb-50">
@@ -148,6 +147,7 @@ const Home = () => {
             {featuredProducts.map((product) => (
               <ProductCard
                 key={product.id}
+                productId={product.id}
                 productName={product.name}
                 productPrice={product.price}
                 imgSrc={product.image}

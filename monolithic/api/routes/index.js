@@ -27,7 +27,8 @@ const storage = multer.diskStorage({
   },
 });
 
-const upload = multer({ storage });
+const upload = multer({ storage: storage });
+
 
 // Use cors to enable cross-origin resource sharing
 // router.use(
@@ -57,7 +58,7 @@ router.get("/products/list", async (req, res) => {
   const conn = await pool.getConnection();
   try {
     const rows = await conn.query(
-      "SELECT id, name, price, active, image_url FROM Product"
+      "SELECT id, name, price, weight, active, image_url FROM Product"
     );
     res.json(rows);
   } catch (err) {

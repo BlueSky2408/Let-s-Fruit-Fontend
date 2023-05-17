@@ -8,7 +8,6 @@ import Navbar from '../../components/Navbar/Navbar'
 import HeroBanner from '../../components/HeroBanner/HeroBanner'
 import Footer from '../../components/Footer/Footer'
 import ProductList from '../../components/ProductList/ProductList'
-import ProductCard from '../../components/Product/ProductCard'
 
 
 const Container = styled.div``;
@@ -47,6 +46,30 @@ const Alcohol = () => {
       <Loader />
       <Navbar />
       <HeroBanner />
+      <ProductList
+        titleBlack="Những sản phẩm"
+        titleOrange="bán chạy nhất"
+        products={[
+          {
+            id: 1,
+            name: "MS600A",
+            price: "500,000",
+            image: "https://scontent.fhan19-1.fna.fbcdn.net/v/t39.30808-6/321489023_5822231724556412_7332453204103911515_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=0debeb&_nc_ohc=lVauLlKiePYAX9sGoCx&_nc_ht=scontent.fhan19-1.fna&oh=00_AfCM3QHILmdcnFsskqW7z4G0kbQPV1P9BDfbwTWgDVZpow&oe=64618E73",
+          },
+          {
+            id: 2,
+            name: "MS600B",
+            price: "500,000",
+            image: "https://scontent.fhan19-1.fna.fbcdn.net/v/t39.30808-6/322182578_701039088040383_6287780387508107818_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=0debeb&_nc_ohc=MiktjaO2OuQAX8hRhTE&_nc_ht=scontent.fhan19-1.fna&oh=00_AfALXRc3Neb96zx6X8ApVlTMqVTY1brSUt0vKxIQU-FqQA&oe=64629623",
+          },
+          {
+            id: 3,
+            name: "MS600C",
+            price: "500,000",
+            image: "https://scontent.fhan19-1.fna.fbcdn.net/v/t39.30808-6/320884513_515765223952521_6991890295606375015_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=0debeb&_nc_ohc=excIdVF5bugAX_i4f9e&_nc_ht=scontent.fhan19-1.fna&oh=00_AfDan-j4pFw5nTciLdTRB9N5O4myTjw7uPMxw8jfuNX8oA&oe=64623D71",
+          },
+        ]}
+      />
       <Container>
         <Title>Whine & Whisky</Title>
         <FilterContainer>
@@ -81,27 +104,6 @@ const Alcohol = () => {
           </Filter>
         </FilterContainer>
       </Container>
-      <ProductList />
-      <div className="product-section mt-80 mb-150">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-8 offset-lg-2 text-center">
-              <div className="section-title">
-                <h3>Những sản phẩm <span className="orange-text">của chúng tôi</span></h3>
-              </div>
-            </div>
-          </div>
-
-          <div className="row">
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-          </div>
-        </div>
-      </div>
       <Footer />
     </div>
   )

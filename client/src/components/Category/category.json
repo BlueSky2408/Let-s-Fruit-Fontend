@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "img": "https://images.pexels.com/photos/219794/pexels-photo-219794.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "title": "Giỏ hoa quả",
+        "router": "/fruit"
+    },
+    {
+        "id": 2,
+        "img": "https://images.pexels.com/photos/4551975/pexels-photo-4551975.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "title": "Detox",
+        "router": "/detox"
+    },
+    {
+        "id": 3,
+        "img": "https://images.pexels.com/photos/9299260/pexels-photo-9299260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "title": "Wine&Whisky",
+        "router": "/alcohol"
+    }
+]

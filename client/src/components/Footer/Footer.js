@@ -1,12 +1,15 @@
 import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import "./Footer.css"
 
 
 const Footer = () => {
   return (
-    <div className="footer-area">
+    <>
+      <div className="footer-area">
         <div className="container">
           <div className="row">
             <div className="col-lg-8 offset-lg-2 text-center">
@@ -16,30 +19,31 @@ const Footer = () => {
               </div>
             </div>
 
-
             <div className="col-lg-3 col-md-6">
               <div className="footer-box about-widget">
-                <h2 className="widget-title">Các loại giỏ quà</h2>
+                <h2 className="widget-title">Thông tin liên lạc</h2>
                 <ul>
-                    <li>Giỏ hoa quả</li>
-                    <li>Detox</li>
-                    <li>Wine & Whisky</li>
-                    <li>Đồ khô</li>
-                    <li>Thiệp chúc mừng</li>
+                  <li className="footerItems">
+                    <LocationOnIcon className="footerIcon" />
+                    110 D7 TT Vĩnh Hồ - Ngõ 63 Thái Thịnh - Đống Đa - HN
+                  </li>
+                  <li className="footerItems">
+                    <LocalPhoneIcon className="footerIcon" />
+                    0963.758.338
+                  </li>
                 </ul>
               </div>
             </div>
 
-
             <div className="col-lg-3 col-md-6">
-              <div className="footer-box get-in-touch">
-                <h2 className="widget-title">Sự kiện</h2>
+              <div className="footer-box about-widget">
+                <h2 className="widget-title">Các loại sản phẩm</h2>
                 <ul>
-                  <li>Năm mới</li>
-                  <li>Chúc mừng sinh nhật</li>
-                  <li>Kỷ niệm</li>
-                  <li>Ngày của Mẹ</li>
-                  <li>Ngày Phụ Nữ Việt Nam</li>
+                  <li>Giỏ hoa quả</li>
+                  <li>Detox</li>
+                  <li>Wine&Whisky</li>
+                  <li>Đồ khô</li>
+                  <li>Thiệp chúc mừng</li>
                 </ul>
               </div>
             </div>
@@ -59,13 +63,19 @@ const Footer = () => {
               <div className="footer-box social-icons">
                 <h2 className="widget-title">Theo dõi chúng tôi</h2>
                 <a href="https://www.facebook.com/letsfruit.vn/?ref=page_internal" rel="noopener" className="facebook social">
-                    <FontAwesomeIcon icon={faFacebook} size='2x'/>
+                  <FontAwesomeIcon icon={faFacebook} size='2x' />
                 </a>
               </div>
             </div>
+
           </div>
         </div>
       </div>
+
+      <div className="copyright">
+        <p>© 2023 Bản quyền thuộc về Let's Fruit Việt Nam</p>
+      </div>
+    </>
   )
 }
 

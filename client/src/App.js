@@ -6,18 +6,17 @@ import {
 } from "react-router-dom";
 
 import Home from "./pages/Home"
-import ProductList from './pages/ProductList';
 import Detox from "./pages/Detox/Detox";
 import Alcohol from './pages/Whine & Whisky/Alcohol';
 import DryFood from "./pages/DryFood/DryFood";
 import GiftCard from './pages/GiftCard/GiftCard';
 import FAQs from "./pages/FAQs/FAQs";
 import Error404 from "./pages/Error404";
-import ShoppingCart from "./pages/ShoppingCart";
+import ShoppingCart from "./pages/Cart/ShoppingCart";
 import Checkout from "./pages/Checkout";
 import SingleProduct from "./pages/Single_product";
 import Fruit from './pages/Fruit/Fruit';
-import CartProvider from './pages/Cart/CartContext';
+import { CartProvider } from './pages/Cart/CartContext';
 
 
 function App() {
@@ -35,7 +34,11 @@ function App() {
           <Route exact path="/404_Not_Found" element={<Error404 />} />
           <Route exact path="/cart" element={<ShoppingCart />} />
           <Route exact path="/checkout" element={<Checkout />} />
-          <Route path="/single-product/:productId" element={<SingleProduct />} />
+          {/* Route for redirect according to product ID       
+          <Route path="/single-product/:productId" element={<SingleProduct />} /> */}
+
+          {/* Route for testing view, can delete afterward, once product is fetch on db */}
+          <Route path="/single-product" element={<SingleProduct />} />
         </Routes>
       </Router>
     </CartProvider>

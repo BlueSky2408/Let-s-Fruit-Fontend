@@ -42,9 +42,10 @@ nav.main-menu ul li {
 }
 
 nav.main-menu ul li a {
+    font-family: "Nunito", sans-serif;
     color: #fff;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 17px;
     display: block;
     padding: 15px;
 }

@@ -130,3 +130,27 @@ h2.widget-title:after {
 .footer-box.social-icons a.facebook:hover {
     color: #F28123;
 }
+
+
+.footerItems {
+    align-items: center;
+    font-size: 15px;
+}
+
+.footerIcon {
+    
+    margin-right: 5px;
+    font-size: 20px !important;
+}
+
+.copyright {
+    padding: 10px;
+    align-items: center;
+    display: contents;
+}
+
+.copyright p {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+}

@@ -56,7 +56,7 @@ const ProductEdit = () => {
           setCategoryId(data.category_id);
           setPrice(data.price);
           setSku(data.sku);
-          setStock(data.stock);
+          setStock(data.weight);
           setActive(data.active);
         }
       })

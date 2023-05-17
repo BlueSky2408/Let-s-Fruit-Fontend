@@ -8,6 +8,7 @@ import StorefrontIcon from "@mui/icons-material/Storefront";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
 import SignalCellularAltIcon from "@mui/icons-material/SignalCellularAlt";
 import LogoutIcon from "@mui/icons-material/Logout";
+import AddBusinessIcon from "@mui/icons-material/AddBusiness";
 
 import "./Topbar.css";
 import "./Sidebar.css";
@@ -20,21 +21,17 @@ function Layout() {
         <div className="topbarWrapper">
           <div className="topLeft">
             <div className="topbarLogo">
-              <Link to="/">Let's Fruit</Link>
+              <a href="/admin/">Let's Fruit</a>
               <p>Fruit & Flower Boutique</p>
             </div>
           </div>
-          <div className="topRight">
-            <div className="topbarIconsContainer">
-              <NotificationsNoneIcon />
-              <span className="topbarIconBadge">2</span>
-            </div>
-            <img
-              src="https://images.pexels.com/photos/2869318/pexels-photo-2869318.jpeg?auto=compress&cs=tinysrgb&w=600"
-              alt=""
-              className="avatar"
-            />
-          </div>
+          {/* <div className="topRight">
+              <div className="topbarIconsContainer">
+                <NotificationsNoneIcon />
+                <span className="topbarIconBadge">2</span>
+              </div>
+              <img src="https://images.pexels.com/photos/2869318/pexels-photo-2869318.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" className="avatar" />
+            </div> */}
         </div>
       </div>
       <div className="contain">
@@ -44,41 +41,36 @@ function Layout() {
             <div className="sidebarMenu">
               <h3 className="sidebarTitle">Dashboard</h3>
               <ul className="sidebarList">
-                <Link to="/" className="link">
+                <Link to="/admin/" className="link">
                   <li className="sidebarItems">
                     <HomeIcon className="sidebarIcon" />
                     Trang chủ
                   </li>
                 </Link>
-                <Link to="/revenue" className="link">
-                  <li className="sidebarItems">
-                    <TrendingUpIcon className="sidebarIcon" />
-                    Thông số doanh thu
-                  </li>
-                </Link>
-              </ul>
-            </div>
-            <div className="sidebarMenu">
-              <h3 className="sidebarTitle">Quick Menu</h3>
-              <ul className="sidebarList">
+                {/* <Link to="/revenue" className="link"><li className="sidebarItems">
+              <TrendingUpIcon className="sidebarIcon" />
+              Thông số doanh thu
+            </li></Link> */}
                 {/*<li className="sidebarItems">
                 <PersonIcon className="sidebarIcon" />
                 User
                 </li>*/}
-                <Link to="/products" className="link">
+                <Link to="/admin/productslist" className="link">
                   <li className="sidebarItems">
                     <StorefrontIcon className="sidebarIcon" />
                     Danh sách sản phẩm
                   </li>
                 </Link>
-                <li className="sidebarItems">
-                  <CreditCardIcon className="sidebarIcon" />
-                  Thanh toán
-                </li>
-                <li className="sidebarItems">
-                  <SignalCellularAltIcon className="sidebarIcon" />
-                  Báo cáo
-                </li>
+                <Link to="/admin/productedit/new" className="link">
+                  <li className="sidebarItems">
+                    <AddBusinessIcon className="sidebarIcon" />
+                    Thêm sản phẩm
+                  </li>
+                </Link>
+                {/* <li className="sidebarItems">
+              <SignalCellularAltIcon className="sidebarIcon" />
+              Báo cáo
+            </li> */}
                 <li className="sidebarItems">
                   <LogoutIcon className="sidebarIcon" />
                   Thoát

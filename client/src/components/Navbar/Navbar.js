@@ -34,8 +34,6 @@ const Navbar = () => {
 
                   <li>
                     <div className="header-icons">
-                      <a className="mobile-hide admin-icon" href="/login"><i
-                        className="fas fa-user"></i></a>
                       <a className="shopping-cart" href="/cart"><i
                         className="fas fa-shopping-cart"></i></a>
                     </div>

@@ -5,12 +5,11 @@ import HeroBanner from "../components/HeroBanner/HeroBanner";
 import Categories from '../components/Category/Categories'
 import Map from "../components/Map/Map";
 import Footer from "../components/Footer/Footer";
-import FeatureList from "../components/HomePage/FeatureList";
-import ProductSection from "../components/HomePage/ProductSection";
 import FeatureList from '../components/FeatureList/FeatureList'
 import AboutUs from '../components/AboutUs/AboutUs'
 import Bubble from '../components/Bubble/Bubble'
-import { ProductList } from '../components/ProductList/ProductList'
+import ProductList from '../components/ProductList/ProductList'
+import { products } from "../data";
 
 
 const Home = () => {
@@ -23,9 +22,15 @@ const Home = () => {
             <FeatureList />
             <Categories />
             <Bubble />
-            <ProductList />
+            <ProductList
+                titleBlack="Những sản phẩm"
+                titleOrange="bán chạy nhất"
+                products={products}
+            />
             <Map />
             <Footer />
         </>
     )
 }
+
+export default Home

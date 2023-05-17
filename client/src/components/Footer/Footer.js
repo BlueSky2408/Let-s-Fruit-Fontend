@@ -6,7 +6,8 @@ import "./Footer.css"
 
 const Footer = () => {
   return (
-    <div className="footer-area">
+    <>
+      <div className="footer-area">
         <div className="container">
           <div className="row">
             <div className="col-lg-8 offset-lg-2 text-center">
@@ -21,25 +22,11 @@ const Footer = () => {
               <div className="footer-box about-widget">
                 <h2 className="widget-title">Các loại giỏ quà</h2>
                 <ul>
-                    <li>Giỏ hoa quả</li>
-                    <li>Detox</li>
-                    <li>Wine & Whisky</li>
-                    <li>Đồ khô</li>
-                    <li>Thiệp chúc mừng</li>
-                </ul>
-              </div>
-            </div>
-
-
-            <div className="col-lg-3 col-md-6">
-              <div className="footer-box get-in-touch">
-                <h2 className="widget-title">Sự kiện</h2>
-                <ul>
-                  <li>Năm mới</li>
-                  <li>Chúc mừng sinh nhật</li>
-                  <li>Kỷ niệm</li>
-                  <li>Ngày của Mẹ</li>
-                  <li>Ngày Phụ Nữ Việt Nam</li>
+                  <li>Giỏ hoa quả</li>
+                  <li>Detox</li>
+                  <li>Wine & Whisky</li>
+                  <li>Đồ khô</li>
+                  <li>Thiệp chúc mừng</li>
                 </ul>
               </div>
             </div>
@@ -59,13 +46,19 @@ const Footer = () => {
               <div className="footer-box social-icons">
                 <h2 className="widget-title">Theo dõi chúng tôi</h2>
                 <a href="https://www.facebook.com/letsfruit.vn/?ref=page_internal" rel="noopener" className="facebook social">
-                    <FontAwesomeIcon icon={faFacebook} size='2x'/>
+                  <FontAwesomeIcon icon={faFacebook} size='2x' />
                 </a>
               </div>
             </div>
+
           </div>
         </div>
       </div>
+
+      <div className="copyright">
+        <p>© 2023 Bản quyền thuộc về Let's Fruit Việt Nam</p>
+      </div>
+    </>
   )
 }
 

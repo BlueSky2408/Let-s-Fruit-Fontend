@@ -43,142 +43,26 @@ export const categories = [
   },
 ];
 
-export const popularProducts = [
+export const products = [
   {
     id: 1,
-    img: "https://media.istockphoto.com/id/478098835/photo/bowl-of-fresh-fruit.jpg?b=1&s=612x612&w=0&k=20&c=6uRCfGflFTS97nsDPmYDaQYTikvTApg6hdcSVvzmO0Y=",
+    name: "MS600A",
+    price: "500,000",
+    image: "https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/322395827_499815978922865_5039692591822169009_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=0debeb&_nc_ohc=G-kX_VSDnz8AX83rZYB&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDAF-qsF2jWGn-hAS-2LK7YRLjGgfG0rbIn5CNsX5eeGA&oe=646976E0",
+    description: "lorem ipsum",
   },
   {
     id: 2,
-    img: "https://images.pexels.com/photos/235294/pexels-photo-235294.jpeg?auto=compress&cs=tinysrgb&w=600",
+    name: "MS600B",
+    price: "500,000",
+    image: "https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/321509656_1222001525193022_8106500305392848442_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=0debeb&_nc_ohc=dsRI2d6-0rMAX_ncRsc&_nc_ht=scontent.fhan17-1.fna&oh=00_AfDVYrpfsVLMx3gEekFgqL-_ETf9q2erJp1m2iG0pNvTTw&oe=64694684",
+    description: "lorem ipsum",
   },
   {
     id: 3,
-    img: "https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg?auto=compress&cs=tinysrgb&w=600",
-  },
-  {
-    id: 4,
-    img: "https://media.istockphoto.com/id/478098835/photo/bowl-of-fresh-fruit.jpg?b=1&s=612x612&w=0&k=20&c=6uRCfGflFTS97nsDPmYDaQYTikvTApg6hdcSVvzmO0Y=",
-  },
-  {
-    id: 5,
-    img: "https://images.pexels.com/photos/2255924/pexels-photo-2255924.jpeg?auto=compress&cs=tinysrgb&w=600",
-  },
-  {
-    id: 6,
-    img: "https://images.pexels.com/photos/220911/pexels-photo-220911.jpeg?auto=compress&cs=tinysrgb&w=600",
-  },
-  {
-    id: 7,
-    img: "https://images.pexels.com/photos/4916114/pexels-photo-4916114.jpeg?auto=compress&cs=tinysrgb&w=600",
-  },
-  {
-    id: 8,
-    img: "https://media.istockphoto.com/id/810147810/photo/fruit-bowl-isolated.jpg?b=1&s=612x612&w=0&k=20&c=68RVjWaZ_z0aZUAyGxvgWY1jn8KVMeJ0oTyukcyond8=",
-  },
-]
-
-export const userData = [
-  {
-    name: 'T1',
-    Doanh_thu: 4000,
-  },
-  {
-    name: 'T2',
-    Doanh_thu: 3000,
-  },
-  {
-    name: 'T3',
-    Doanh_thu: 2000,
-  },
-  {
-    name: 'T4',
-    Doanh_thu: 5000,
-  },
-  {
-    name: 'T5',
-    Doanh_thu: 6000,
-  },
-  {
-    name: 'T6',
-    Doanh_thu: 5500,
-  },
-  {
-    name: 'T7',
-    Doanh_thu: 5600,
-  },
-  {
-    name: 'T8',
-    Doanh_thu: 5200,
-  },
-  {
-    name: 'T9',
-    Doanh_thu: 6300,
-  },
-  {
-    name: 'T10',
-    Doanh_thu: 6600,
-  },
-  {
-    name: 'T11',
-    Doanh_thu: 7100,
-  },
-  {
-    name: 'T12',
-    Doanh_thu: 7600,
+    name: "MS600C",
+    price: "500,000",
+    image: "https://scontent.fhan19-1.fna.fbcdn.net/v/t39.30808-6/320884513_515765223952521_6991890295606375015_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=0debeb&_nc_ohc=excIdVF5bugAX_i4f9e&_nc_ht=scontent.fhan19-1.fna&oh=00_AfDan-j4pFw5nTciLdTRB9N5O4myTjw7uPMxw8jfuNX8oA&oe=64623D71",
+    description: "lorem ipsum",
   },
 ];
-
-export const list = [
-  {
-    title: "Những sản phẩm bán chạy nhất",
-    products: [
-      {
-        id: 1,
-        img: "https://images.pexels.com/photos/9299260/pexels-photo-9299260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        product_title: "Fruit Basket 1",
-        price: "women"
-      },
-      {
-        id: 2,
-        img: "https://images.pexels.com/photos/4551975/pexels-photo-4551975.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        product_title: "Fruit Basket 2",
-        price: "coat"
-      },
-      {
-        id: 3,
-        img: "https://images.pexels.com/photos/219794/pexels-photo-219794.jpeg?auto=compress&cs=tinysrgb&w=600",
-        product_title: "Fruit Basket 3",
-        price: "jeans"
-      }
-    ]
-  },
-  {
-    title: "Sản phẩm đi kèm",
-    products: [
-      {
-        id: 4,
-        img: "https://media.istockphoto.com/id/478098835/photo/bowl-of-fresh-fruit.jpg?b=1&s=612x612&w=0&k=20&c=6uRCfGflFTS97nsDPmYDaQYTikvTApg6hdcSVvzmO0Y=",
-        product_title: "Fruit Basket 4",
-        price: "women"
-      },
-      {
-        id: 5,
-        img: "https://images.pexels.com/photos/2255924/pexels-photo-2255924.jpeg?auto=compress&cs=tinysrgb&w=600",
-        product_title: "Fruit Basket 5",
-        price: "coat"
-      },
-      {
-        id: 6,
-        img: "https://images.pexels.com/photos/220911/pexels-photo-220911.jpeg?auto=compress&cs=tinysrgb&w=600",
-        product_title: "Fruit Basket 6",
-        price: "jeans"
-      }
-    ]
-  }
-];
-
-export const user = {
-  email: "shopping@gmail.com",
-  password: "12345",
-}

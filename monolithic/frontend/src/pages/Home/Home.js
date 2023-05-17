@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import CategoryItem from "../../components/Home/CategoryItem";
 import ProductCard from "../../components/Product/ProductCard";
 
-import "./HeroBanner.css";
 import "./AboutUs.css";
 import "./FeatureList.css";
 import "./Categories.css";
@@ -24,79 +23,6 @@ const Home = () => {
 
   return (
     <>
-      {/* Hero Banner */}
-
-      <div className="homepage-slider">
-        {/** First Slider  */}
-        <div className="single-homepage-slider homepage-bg-1">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-12 col-lg-7 offset-lg-1 offset-xl-0">
-                <div className="hero-text">
-                  <div className="hero-text-tablecell">
-                    <p className="subtitle">Let's Fruit</p>
-                    <h1>We bring you wonderful fruit baskets & More</h1>
-                    <div className="hero-btns">
-                      <Link to="/products/fruits" className="boxed-btn">
-                        Fruit Basket Collection
-                      </Link>
-                      <Link to="/" className="bordered-btn">
-                        Contact Us
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/** 2nd Slider  */}
-        <div className="single-homepage-slider homepage-bg-2">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-10 offset-lg-1 text-center">
-                <div className="hero-text">
-                  <div className="hero-text-tablecell">
-                    <p className="subtitle">Fresh Everyday</p>
-                    <h1>100% Organic Collection</h1>
-                    <div className="hero-btns">
-                      <Link to="/products/all" className="boxed-btn">
-                        Visit Shop
-                      </Link>
-                      <Link href="/" className="bordered-btn">
-                        Contact Us
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/** 3rd Slider  */}
-        <div className="single-homepage-slider homepage-bg-3">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-10 offset-lg-1 text-right">
-                <div className="hero-text">
-                  <div className="hero-text-tablecell">
-                    <p className="subtitle">Mega Sale Going On!</p>
-                    <h1>Get December Discount</h1>
-                    <div className="hero-btns">
-                      <Link href="/products/sale" className="boxed-btn">
-                        Visit Shop
-                      </Link>
-                      <Link href="/" className="bordered-btn">
-                        Contact Us
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* About Us */}
 

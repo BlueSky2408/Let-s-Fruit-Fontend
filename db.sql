@@ -1,3 +1,12 @@
+
+-- Create the Category table
+CREATE TABLE Category (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  description TEXT,
+  PRIMARY KEY (id)
+);
+
 -- Create the Product table
 CREATE TABLE Product (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -7,7 +16,7 @@ CREATE TABLE Product (
   category_id INT UNSIGNED NOT NULL,
   price INT UNSIGNED NOT NULL,
   display_price INT UNSIGNED NOT NULL,
-  enabled TINYINT(1) NOT NULL DEFAULT 1,
+  active TINYINT(1) NOT NULL DEFAULT 1,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   weight DECIMAL(10, 2) NOT NULL DEFAULT 0,
@@ -19,10 +28,3 @@ CREATE TABLE Product (
   FOREIGN KEY (category_id) REFERENCES Category(id)
 );
 
--- Create the Category table
-CREATE TABLE Category (
-  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  name VARCHAR(255) NOT NULL,
-  description TEXT,
-  PRIMARY KEY (id)
-);

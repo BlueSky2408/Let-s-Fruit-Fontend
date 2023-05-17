@@ -1,35 +1,25 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Layout from "./components/Layout/Layout";
+import HeroBanner from "./components/Layout/HeroBanner";
 import Home from "./pages/Home/Home";
-// import Fruit from "./pages/Fruit";
-// import Detox from "./pages/Detox";
-// import Alcohol from "./pages/Alcohol";
-// import DryFood from "./pages/DryFood";
-// import GiftCard from "./pages/GiftCard";
+import Shop from "./pages/Shop/Shop";
+
 // import ShoppingCart from "./pages/ShoppingCart";
 // import Checkout from "./pages/Checkout";
 
-// import AdminLayout from "./components/AdminLayout";
-// import AdminDashboard from "./pages/AdminDashboard";
-// import AdminProducts from "./pages/AdminProducts";
-// import AdminOrders from "./pages/AdminOrders";
+import AdminLayout from "./components/Layout/Admin/Layout";
+import AdminProductEdit from "./pages/Admin/ProductEdit/ProductEdit";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="/" element={<Home />} />
-          {/* <Route exact path="/fruit" element={<Fruit />} />
-          <Route exact path="/detox" element={<Detox />} />
-          <Route exact path="/alcohol" element={<Alcohol />} />
-          <Route exact path="/do_kho" element={<DryFood />} />
-          <Route exact path="/thiep_chuc_mung" element={<GiftCard />} /> */}
+          <Route path="/" element={<HeroBanner />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/shop/:category?" element={<Shop />} />
+          </Route>
           {/* <Route exact path="/FAQs" element={<FAQs />} /> */}
           {/* <Route exact path="/404_Not_Found" element={<Error404 />} /> */}
           {/* <Route exact path="/cart" element={<ShoppingCart />} />
@@ -37,11 +27,14 @@ function App() {
           {/* <Route exact path="/single_product" element={<SingleProduct />} /> */}
           {/* <Route exact path="/login" element={<Login />} /> */}
         </Route>
-        {/* <Route path="/admin/*" element={<AdminLayout />}>
-            <Route exact path="/admin/dashboard" element={<AdminDashboard />} />
-            <Route exact path="/admin/products" element={<AdminProducts />} />
-            <Route exact path="/admin/orders" element={<AdminOrders />} />
-          </Route> */}
+        <Route path="/admin/" element={<AdminLayout />}>
+          {/* <Route path="/" element={<AdminDashboard />} /> */}
+          {/* <Route path="/revenue" element={<AdminRevenue />} /> */}
+          {/* <Route path="/productslist" element={<AdminProductsList />} /> */}
+          {/* <Route path="/product/:id" element={<AdminProduct />} /> */}
+          <Route path="/admin/productedit/:id?" element={<AdminProductEdit />} />
+          {/* <Route path="/orders" element={<AdminOrders />} /> */}
+        </Route>
       </Routes>
     </Router>
   );

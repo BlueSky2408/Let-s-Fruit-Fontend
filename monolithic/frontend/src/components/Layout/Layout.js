@@ -23,19 +23,19 @@ function Layout() {
                       <Link to="/">Trang chủ</Link>
                     </li>
                     <li>
-                      <Link to="/fruit">Giỏ hoa quả</Link>
+                      <Link to="/shop/fruit">Giỏ hoa quả</Link>
                     </li>
                     <li>
-                      <Link to="/detox">Detox</Link>
+                      <Link to="/shop/detox">Detox</Link>
                     </li>
                     <li>
-                      <Link to="/alcohol">Wine & Whisky</Link>
+                      <Link to="/shop/alcohol">Wine & Whisky</Link>
                     </li>
                     <li>
-                      <Link to="/do_kho">Đồ khô</Link>
+                      <Link to="/shop/do_kho">Đồ khô</Link>
                     </li>
                     <li>
-                      <Link to="/thiep_chuc_mung">Thiệp chúc mừng</Link>
+                      <Link to="/shop/thiep_chuc_mung">Thiệp chúc mừng</Link>
                     </li>
                     <li>
                       <Link to="/FAQs">FAQs</Link>
@@ -54,9 +54,9 @@ function Layout() {
 
                     <li>
                       <div className="header-icons">
-                        <a className="mobile-hide admin-icon" href="/login">
+                        {/* <a className="mobile-hide admin-icon" href="/login">
                           <i className="fas fa-user"></i>
-                        </a>
+                        </a> */}
                         <a className="shopping-cart" href="/cart">
                           <i className="fas fa-shopping-cart"></i>
                         </a>

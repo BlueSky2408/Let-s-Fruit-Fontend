@@ -131,6 +131,18 @@ h2.widget-title:after {
     color: #F28123;
 }
 
+
+.footerItems {
+    align-items: center;
+    font-size: 15px;
+}
+
+.footerIcon {
+    
+    margin-right: 5px;
+    font-size: 20px !important;
+}
+
 .copyright {
     padding: 10px;
     align-items: center;

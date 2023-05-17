@@ -24,13 +24,7 @@ const Navbar = () => {
                   <li><a href="/alcohol">Wine & Whisky</a></li>
                   <li><a href="/do_kho">Đồ khô</a></li>
                   <li><a href="/thiep_chuc_mung">Thiệp chúc mừng</a></li>
-                  <li><a href="/FAQs">FAQs</a>
-                    <ul className="sub-menu">
-                      <li><a href="/">Cách trả tiền?</a></li>
-                      <li><a href="/">Cách mua hàng</a></li>
-                      <li><a href="/">Phương thức thanh toán</a></li>
-                    </ul>
-                  </li>
+                  <li><a href="/FAQs">FAQs</a></li>
 
                   <li>
                     <div className="header-icons">

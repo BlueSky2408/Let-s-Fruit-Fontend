@@ -3,7 +3,6 @@ import "./FAQs.css"
 import Loader from '../../components/Loader/Loader'
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
-import FAQsItem from '../FAQs/FAQsItem'
 import questions from "./questions.json"
 
 const FAQs = () => {
@@ -60,18 +59,6 @@ const FAQs = () => {
           </div>
         </div>
       </div>
-
-      {/* <div className="faq-page">
-        {questions.map((question, index) => (
-          <div className="faq" key={index}>
-            <div className="question" onClick={() => toggleAnswer(index)}>
-              {question.question}
-              <div className={`plus-icon ${showAnswers[index] ? 'minus' : ''}`}></div>
-            </div>
-            {showAnswers[index] && <div className="answer">{question.answer}</div>}
-          </div>
-        ))}
-      </div> */}
       <Footer />
     </div>
   )

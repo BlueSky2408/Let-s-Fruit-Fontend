@@ -1,6 +1,8 @@
 import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import "./Footer.css"
 
 
@@ -17,14 +19,29 @@ const Footer = () => {
               </div>
             </div>
 
+            <div className="col-lg-3 col-md-6">
+              <div className="footer-box about-widget">
+                <h2 className="widget-title">Thông tin liên lạc</h2>
+                <ul>
+                  <li className="footerItems">
+                    <LocationOnIcon className="footerIcon" />
+                    110 D7 TT Vĩnh Hồ - Ngõ 63 Thái Thịnh - Đống Đa - HN
+                  </li>
+                  <li className="footerItems">
+                    <LocalPhoneIcon className="footerIcon" />
+                    0963.758.338
+                  </li>
+                </ul>
+              </div>
+            </div>
 
             <div className="col-lg-3 col-md-6">
               <div className="footer-box about-widget">
-                <h2 className="widget-title">Các loại giỏ quà</h2>
+                <h2 className="widget-title">Các loại sản phẩm</h2>
                 <ul>
                   <li>Giỏ hoa quả</li>
                   <li>Detox</li>
-                  <li>Wine & Whisky</li>
+                  <li>Wine&Whisky</li>
                   <li>Đồ khô</li>
                   <li>Thiệp chúc mừng</li>
                 </ul>

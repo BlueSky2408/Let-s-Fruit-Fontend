@@ -48,6 +48,11 @@ export const CartProvider = ({ children }) => {
         return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
     };
 
+    const cartFinalCal = () => {
+        const shipping = 15000;
+        return cartItems.reduce((total, item) => total + item.price * item.quantity, 0) + shipping;
+    }
+
 
     //Save cartItems to local storage
     //by converting cartItems into JSON format
@@ -80,6 +85,7 @@ export const CartProvider = ({ children }) => {
                 updateQuantity,
                 clearCart,
                 cartTotal,
+                cartFinalCal,
                 updateCartItems,
             }}
         >

@@ -13,5 +13,10 @@
         "id": 3,
         "question": "The aftermath?",
         "answer": "Control your urge, or, continue."
+    },
+    {
+        "id": 4,
+        "question": "Ai không nên sử dụng Detox",
+        "answer": "Mẹ bầu, đang trong thời gian cho con bú, người huyết áp thấp hoặc người bị đau dạ dày phải sử dụng thuốc nên cân nhắc khi sử dụng."
     }
 ]

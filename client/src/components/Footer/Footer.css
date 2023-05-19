@@ -144,7 +144,6 @@ h2.widget-title:after {
 }
 
 .copyright {
-    padding: 10px;
     align-items: center;
     display: contents;
 }
@@ -152,5 +151,7 @@ h2.widget-title:after {
 .copyright p {
     background-color: #000000;
     color: #fff;
+    font-size: 15px;
     text-align: center;
+    padding: 50px;
 }

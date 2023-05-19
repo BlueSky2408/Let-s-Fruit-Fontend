@@ -1,6 +1,5 @@
 import React from 'react'
 import CategoryItem from './CategoryItem';
-import styled from 'styled-components';
 import "./Category.css"
 import categories from '../Category/category.json';
 

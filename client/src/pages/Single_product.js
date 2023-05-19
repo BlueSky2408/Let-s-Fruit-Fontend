@@ -2,7 +2,7 @@ import React from 'react'
 import Loader from '../components/Loader/Loader';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 // import Error404 from '../pages/Error404'
 
 

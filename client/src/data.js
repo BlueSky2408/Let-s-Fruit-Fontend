@@ -41,7 +41,7 @@ export const products = [
     id: 3,
     name: "MS600C",
     price: 500000,
-    image: "https://scontent.fhan19-1.fna.fbcdn.net/v/t39.30808-6/320884513_515765223952521_6991890295606375015_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=0debeb&_nc_ohc=excIdVF5bugAX_i4f9e&_nc_ht=scontent.fhan19-1.fna&oh=00_AfDan-j4pFw5nTciLdTRB9N5O4myTjw7uPMxw8jfuNX8oA&oe=64623D71",
+    image: "https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/321489023_5822231724556412_7332453204103911515_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=0debeb&_nc_ohc=G0-DRBM-DUQAX8-AeO6&_nc_ht=scontent.fhan17-1.fna&oh=00_AfC_IsoaN1yh-hYUrtWOMPTaGgIXVF1eeYbWdipiw2vfRw&oe=646B71B3",
     description: "lorem ipsum",
   },
 ];

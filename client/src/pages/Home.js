@@ -10,7 +10,6 @@ import AboutUs from '../components/AboutUs/AboutUs'
 import Bubble from '../components/Bubble/Bubble'
 import ProductList from '../components/ProductList/ProductList'
 import { products } from "../data";
-import ShoppingCart from "./Cart/ShoppingCart";
 
 
 const Home = () => {
@@ -28,7 +27,6 @@ const Home = () => {
                 titleOrange="bán chạy nhất"
                 products={products}
             />
-            <ShoppingCart />
             <Map />
             <Footer />
         </>

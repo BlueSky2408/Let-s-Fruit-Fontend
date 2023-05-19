@@ -2,19 +2,20 @@ import React from 'react'
 import Loader from '../../components/Loader/Loader'
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
+import ClearIcon from '@mui/icons-material/Clear';
 import { CartContext } from './CartContext'
 import { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 
 const ShoppingCart = (props) => {
-    const { cartItems, removeFromCart, updateQuantity, cartTotal, updateCartItems } = useContext(CartContext);
+    const { cartItems, removeFromCart, updateQuantity, cartTotal, cartFinalCal, updateCartItems } = useContext(CartContext);
 
+    const navigate = useNavigate();
 
-    const calculateTotal = () => {
-        const subtotal = cartTotal();
-        const shipping = 15000;
-        return subtotal + shipping;
-    };
+    const productInfos = () => {
+        navigate('/checkout', {state:{cartItems, cartTotal, cartFinalCal}});
+    }
 
     return (
         <>
@@ -56,7 +57,7 @@ const ShoppingCart = (props) => {
                                             <tr key={item.id}>
                                                 {/* Remove item from cart */}
                                                 <td className="product-remove">
-                                                    <button onClick={() => removeFromCart(item.id)}>Remove</button>
+                                                    <button className="remove" onClick={() => removeFromCart(item.id)}><ClearIcon /></button>
                                                 </td>
                                                 {/* Display item details */}
                                                 <td className="product-image">
@@ -98,17 +99,17 @@ const ShoppingCart = (props) => {
                                         </tr>
                                         <tr className="total-data">
                                             <td><strong>Shipping: </strong></td>
-                                            <td>15000đ</td>
+                                            <td>{cartFinalCal() - cartTotal()}đ</td>
                                         </tr>
                                         <tr className="total-data">
                                             <td><strong>Total: </strong></td>
-                                            <td>{calculateTotal()}đ</td>
+                                            <td>{cartFinalCal()}đ</td>
                                         </tr>
                                     </tbody>
                                 </table>
                                 <div className="cart-buttons">
                                     <a href="/cart" className="boxed-btn">Update Cart</a>
-                                    <a href="/checkout" className="boxed-btn black">Check Out</a>
+                                    <a href="/checkout" className="boxed-btn black" onClick={() => {productInfos()}}>Check Out</a>
                                 </div>
                             </div>
                         </div>

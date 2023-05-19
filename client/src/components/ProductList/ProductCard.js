@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { CartContext } from '../../pages/Cart/CartContext';
 import { useContext } from 'react';
 
@@ -26,8 +26,8 @@ const ProductCard = (props) => {
                     <img src={props.ImgSrc} alt="" />
                     {/* </Link> */}
                     <h3>{props.productName}</h3>
-                    <p className="product-price">{props.productPrice}</p>
-                    <a href="/cart" className="cart-btn" onClick={addToCart}><i className="fas fa-shopping-cart"></i> Add to Cart</a>
+                    <p className="product-price">{props.productPrice}đ</p>
+                    <button className="cart-btn" onClick={addToCart}><i className="fas fa-shopping-cart"></i> Add to Cart</button>
                 </div>
             </div>
         </div>

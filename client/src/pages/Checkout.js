@@ -1,12 +1,14 @@
 import React from 'react'
 import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer/Footer'
+import { CartContext } from './Cart/CartContext'
+import { useContext } from 'react'
 
 const Checkout = () => {
+    const { cartItems, cartTotal, cartFinalCal } = useContext(CartContext);
     return (
         <>
             <Navbar />
-
             <div class="breadcrumb-section breadcrumb-bg">
                 <div class="container">
                     <div class="row">
@@ -39,17 +41,17 @@ const Checkout = () => {
                                             <div class="card-body">
                                                 <div class="billing-address-form">
                                                     <form action="index.html">
-                                                        <p><input type="text" placeholder="Name"/></p>
-                                                        <p><input type="email" placeholder="Email"/></p>
-                                                        <p><input type="text" placeholder="Address"/></p>
-                                                        <p><input type="tel" placeholder="Phone"/></p>
+                                                        <p><input type="text" placeholder="Name" /></p>
+                                                        <p><input type="email" placeholder="Email" /></p>
+                                                        <p><input type="text" placeholder="Address" /></p>
+                                                        <p><input type="tel" placeholder="Phone" /></p>
                                                         <p><textarea name="bill" id="bill" cols="30" rows="10" placeholder="Say Something"></textarea></p>
                                                     </form>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card single-accordion">
+                                    {/* <div class="card single-accordion">
                                         <div class="card-header" id="headingTwo">
                                             <h5 class="mb-0">
                                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -64,8 +66,8 @@ const Checkout = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="card single-accordion">
+                                    </div> */}
+                                    {/* <div class="card single-accordion">
                                         <div class="card-header" id="headingThree">
                                             <h5 class="mb-0">
                                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -80,7 +82,7 @@ const Checkout = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
 
                             </div>
@@ -100,31 +102,27 @@ const Checkout = () => {
                                             <td>Product</td>
                                             <td>Total</td>
                                         </tr>
-                                        <tr>
-                                            <td>Strawberry</td>
-                                            <td>$85.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Berry</td>
-                                            <td>$70.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Lemon</td>
-                                            <td>$35.00</td>
-                                        </tr>
+                                    </tbody>
+                                    <tbody className="order-details-body">
+                                        {cartItems.map((item) => (
+                                            <tr key={item.id}>
+                                                <td>{item.name}</td>
+                                                <td>{item.price * item.quantity}đ</td>
+                                            </tr>
+                                        ))}
                                     </tbody>
                                     <tbody class="checkout-details">
                                         <tr>
                                             <td>Subtotal</td>
-                                            <td>$190</td>
+                                            <td>{cartTotal()}đ</td>
                                         </tr>
                                         <tr>
                                             <td>Shipping</td>
-                                            <td>$50</td>
+                                            <td>{cartFinalCal() - cartTotal()}đ</td>
                                         </tr>
                                         <tr>
                                             <td>Total</td>
-                                            <td>$240</td>
+                                            <td>{cartFinalCal()}đ</td>
                                         </tr>
                                     </tbody>
                                 </table>

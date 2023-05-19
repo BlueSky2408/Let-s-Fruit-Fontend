@@ -1107,15 +1107,17 @@ p.product-price span {
   font-weight: 400;
 }
 
-a.cart-btn {
+button.cart-btn {
   font-family: 'Poppins', sans-serif;
   display: inline-block;
   background-color: #F28123;
   color: #fff;
   padding: 10px 20px;
+  border-radius: 30px; /* Adjust the value to change the oval shape */
+  border: none;
 }
 
-a.cart-btn i {
+button.cart-btn i {
   margin-right: 5px;
 }
 
@@ -1239,8 +1241,12 @@ td.product-quantity input {
   margin-bottom: 0;
 }
 
-td.product-remove a {
+td.product-remove {
   color: #051922;
+}
+
+button.remove {
+  border: none;
 }
 
 .total-section table.total-table {

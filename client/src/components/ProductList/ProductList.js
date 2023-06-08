@@ -1,6 +1,15 @@
 import React from 'react'
 import ProductCard from './ProductCard';
 
+export const ProductList = (props) => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3002/products/list")
+      .then((res) => res.json())
+      .then((data) => setData(data))
+      .catch((err) => console.error(err));
+  }, []);
 
 export const ProductList = (props) => {
   const productData = props.products.map((product) => (
@@ -26,7 +35,7 @@ export const ProductList = (props) => {
         <div className="row">{productData}</div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProductList
+export default ProductList;

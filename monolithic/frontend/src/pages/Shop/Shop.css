@@ -1,0 +1,33 @@
+.fruit-container {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+
+.fruit-title {
+  font-family: "Great Vibes", cursive;
+  font-size: 60px;
+  position: relative;
+  padding-bottom: 15px;
+  align-content: center;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter {
+  margin: 20px;
+}
+
+.filter-text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+.filter-select {
+  padding: 10px;
+  margin-right: 20px;
+}
